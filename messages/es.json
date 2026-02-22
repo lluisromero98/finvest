@@ -1,0 +1,177 @@
+{
+  "common": {
+    "appName": "FINVEST",
+    "tagline": "Smart Money Trading Platform",
+    "loading": "Cargando...",
+    "error": "Error",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "close": "Cerrar",
+    "back": "Volver",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "search": "Buscar",
+    "noResults": "Sin resultados",
+    "seeAll": "Ver todo"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "chart": "Gráfico",
+    "simulator": "Simulador",
+    "portfolio": "Portfolio",
+    "academy": "Academia",
+    "settings": "Configuración"
+  },
+  "auth": {
+    "login": "Iniciar Sesión",
+    "register": "Crear Cuenta",
+    "logout": "Cerrar Sesión",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "confirmPassword": "Confirmar contraseña",
+    "username": "Nombre de usuario",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "noAccount": "¿No tienes cuenta?",
+    "hasAccount": "¿Ya tienes cuenta?",
+    "registerHere": "Regístrate aquí",
+    "loginHere": "Inicia sesión aquí",
+    "orContinueWith": "O continuar con",
+    "errors": {
+      "invalidEmail": "Correo electrónico no válido",
+      "passwordMin": "La contraseña debe tener al menos 8 caracteres",
+      "passwordMatch": "Las contraseñas no coinciden",
+      "usernameMin": "El nombre de usuario debe tener al menos 3 caracteres",
+      "loginFailed": "Credenciales incorrectas",
+      "registerFailed": "Error al crear la cuenta"
+    }
+  },
+  "landing": {
+    "hero": {
+      "title": "Domina el Trading con",
+      "titleHighlight": "Smart Money Concepts",
+      "subtitle": "La plataforma que integra ICT, Smart Money, Wyckoff y Elliott Wave. Aprende, practica con simulador y analiza mercados con IA.",
+      "cta": "Empezar Gratis",
+      "ctaSecondary": "Ver Demo"
+    },
+    "features": {
+      "title": "Todo lo que necesitas para operar como un profesional",
+      "charts": {
+        "title": "Gráficos SMC Profesionales",
+        "description": "Detección automática de FVG, Order Blocks, BOS, ChoCH y zonas de liquidez directamente en el gráfico."
+      },
+      "simulator": {
+        "title": "Simulador de Trading",
+        "description": "Practica con 100.000€ virtuales en condiciones reales de mercado. Sin riesgo, máximo aprendizaje."
+      },
+      "ai": {
+        "title": "Análisis IA Smart Money",
+        "description": "IA que detecta patrones SMC automáticamente y genera BIAS diarios con niveles clave."
+      },
+      "academy": {
+        "title": "Academia ICT/SMC",
+        "description": "Aprende desde cero hasta nivel experto con lecciones interactivas, quizzes y sistema de XP."
+      }
+    }
+  },
+  "dashboard": {
+    "welcome": "Bienvenido de nuevo",
+    "marketOverview": "Vista del Mercado",
+    "watchlist": "Lista de Seguimiento",
+    "dailyBias": "BIAS Diario",
+    "addToWatchlist": "Añadir a watchlist",
+    "removeFromWatchlist": "Eliminar de watchlist",
+    "noWatchlist": "Tu watchlist está vacía. Busca activos para añadir.",
+    "forex": "Forex",
+    "indices": "Índices",
+    "crypto": "Cripto"
+  },
+  "chart": {
+    "timeframes": "Temporalidad",
+    "indicators": "Indicadores SMC",
+    "fvg": "Fair Value Gap",
+    "ob": "Order Blocks",
+    "bos": "Break of Structure",
+    "choch": "Change of Character",
+    "pdh_pdl": "PDH/PDL",
+    "liquidity": "Liquidez BSL/SSL",
+    "ndog": "NDOG",
+    "nwog": "NWOG",
+    "volume": "Volumen"
+  },
+  "trading": {
+    "buy": "Comprar",
+    "sell": "Vender",
+    "long": "Long",
+    "short": "Short",
+    "market": "Mercado",
+    "limit": "Límite",
+    "stopLoss": "Stop Loss",
+    "takeProfit": "Take Profit",
+    "quantity": "Cantidad",
+    "leverage": "Apalancamiento",
+    "riskReward": "Riesgo:Recompensa",
+    "executeOrder": "Ejecutar Orden",
+    "closePosition": "Cerrar Posición",
+    "openPositions": "Posiciones Abiertas",
+    "noPositions": "No tienes posiciones abiertas",
+    "entryPrice": "Precio de entrada",
+    "currentPrice": "Precio actual",
+    "pnl": "P&L",
+    "balance": "Balance",
+    "availableMargin": "Margen disponible",
+    "virtualCapital": "Capital Virtual"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "totalPnl": "P&L Total",
+    "winRate": "Win Rate",
+    "profitFactor": "Profit Factor",
+    "maxDrawdown": "Drawdown Máximo",
+    "tradeHistory": "Historial de Operaciones",
+    "noTrades": "Aún no has realizado ninguna operación",
+    "strategy": "Estrategia",
+    "date": "Fecha",
+    "symbol": "Activo",
+    "direction": "Dirección",
+    "entry": "Entrada",
+    "exit": "Salida",
+    "result": "Resultado"
+  },
+  "academy": {
+    "title": "Academia Smart Money",
+    "subtitle": "Aprende ICT/SMC desde cero hasta nivel experto",
+    "beginner": "Principiante",
+    "intermediate": "Intermedio",
+    "advanced": "Avanzado",
+    "expert": "Experto",
+    "startLesson": "Empezar Lección",
+    "continueLesson": "Continuar",
+    "completed": "Completada",
+    "locked": "Bloqueada",
+    "quiz": "Quiz",
+    "xpEarned": "XP ganado",
+    "level": "Nivel",
+    "progress": "Progreso",
+    "levels": {
+      "novice": "Novato",
+      "retail": "Retail Trader",
+      "informed": "Informed Trader",
+      "smartMoney": "Smart Money",
+      "marketMaker": "Market Maker"
+    }
+  },
+  "settings": {
+    "title": "Configuración",
+    "profile": "Perfil",
+    "appearance": "Apariencia",
+    "language": "Idioma",
+    "theme": "Tema",
+    "dark": "Oscuro",
+    "light": "Claro",
+    "system": "Sistema"
+  },
+  "disclaimer": "Datos de mercado con posible retraso. Solo para uso educativo y simulación. No constituye asesoramiento financiero."
+}

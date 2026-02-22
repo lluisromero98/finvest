@@ -1,0 +1,177 @@
+{
+  "common": {
+    "appName": "FINVEST",
+    "tagline": "Smart Money Trading Platform",
+    "loading": "Loading...",
+    "error": "Error",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "search": "Search",
+    "noResults": "No results",
+    "seeAll": "See all"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "chart": "Chart",
+    "simulator": "Simulator",
+    "portfolio": "Portfolio",
+    "academy": "Academy",
+    "settings": "Settings"
+  },
+  "auth": {
+    "login": "Sign In",
+    "register": "Create Account",
+    "logout": "Sign Out",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "username": "Username",
+    "forgotPassword": "Forgot your password?",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "registerHere": "Register here",
+    "loginHere": "Sign in here",
+    "orContinueWith": "Or continue with",
+    "errors": {
+      "invalidEmail": "Invalid email address",
+      "passwordMin": "Password must be at least 8 characters",
+      "passwordMatch": "Passwords do not match",
+      "usernameMin": "Username must be at least 3 characters",
+      "loginFailed": "Invalid credentials",
+      "registerFailed": "Failed to create account"
+    }
+  },
+  "landing": {
+    "hero": {
+      "title": "Master Trading with",
+      "titleHighlight": "Smart Money Concepts",
+      "subtitle": "The platform that integrates ICT, Smart Money, Wyckoff and Elliott Wave. Learn, practice with simulator and analyze markets with AI.",
+      "cta": "Start Free",
+      "ctaSecondary": "View Demo"
+    },
+    "features": {
+      "title": "Everything you need to trade like a professional",
+      "charts": {
+        "title": "Professional SMC Charts",
+        "description": "Automatic detection of FVG, Order Blocks, BOS, ChoCH and liquidity zones directly on the chart."
+      },
+      "simulator": {
+        "title": "Trading Simulator",
+        "description": "Practice with €100,000 virtual capital in real market conditions. Zero risk, maximum learning."
+      },
+      "ai": {
+        "title": "Smart Money AI Analysis",
+        "description": "AI that automatically detects SMC patterns and generates daily BIAS with key levels."
+      },
+      "academy": {
+        "title": "ICT/SMC Academy",
+        "description": "Learn from zero to expert level with interactive lessons, quizzes and XP system."
+      }
+    }
+  },
+  "dashboard": {
+    "welcome": "Welcome back",
+    "marketOverview": "Market Overview",
+    "watchlist": "Watchlist",
+    "dailyBias": "Daily BIAS",
+    "addToWatchlist": "Add to watchlist",
+    "removeFromWatchlist": "Remove from watchlist",
+    "noWatchlist": "Your watchlist is empty. Search for assets to add.",
+    "forex": "Forex",
+    "indices": "Indices",
+    "crypto": "Crypto"
+  },
+  "chart": {
+    "timeframes": "Timeframe",
+    "indicators": "SMC Indicators",
+    "fvg": "Fair Value Gap",
+    "ob": "Order Blocks",
+    "bos": "Break of Structure",
+    "choch": "Change of Character",
+    "pdh_pdl": "PDH/PDL",
+    "liquidity": "Liquidity BSL/SSL",
+    "ndog": "NDOG",
+    "nwog": "NWOG",
+    "volume": "Volume"
+  },
+  "trading": {
+    "buy": "Buy",
+    "sell": "Sell",
+    "long": "Long",
+    "short": "Short",
+    "market": "Market",
+    "limit": "Limit",
+    "stopLoss": "Stop Loss",
+    "takeProfit": "Take Profit",
+    "quantity": "Quantity",
+    "leverage": "Leverage",
+    "riskReward": "Risk:Reward",
+    "executeOrder": "Execute Order",
+    "closePosition": "Close Position",
+    "openPositions": "Open Positions",
+    "noPositions": "No open positions",
+    "entryPrice": "Entry Price",
+    "currentPrice": "Current Price",
+    "pnl": "P&L",
+    "balance": "Balance",
+    "availableMargin": "Available Margin",
+    "virtualCapital": "Virtual Capital"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "totalPnl": "Total P&L",
+    "winRate": "Win Rate",
+    "profitFactor": "Profit Factor",
+    "maxDrawdown": "Max Drawdown",
+    "tradeHistory": "Trade History",
+    "noTrades": "You haven't made any trades yet",
+    "strategy": "Strategy",
+    "date": "Date",
+    "symbol": "Symbol",
+    "direction": "Direction",
+    "entry": "Entry",
+    "exit": "Exit",
+    "result": "Result"
+  },
+  "academy": {
+    "title": "Smart Money Academy",
+    "subtitle": "Learn ICT/SMC from zero to expert level",
+    "beginner": "Beginner",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced",
+    "expert": "Expert",
+    "startLesson": "Start Lesson",
+    "continueLesson": "Continue",
+    "completed": "Completed",
+    "locked": "Locked",
+    "quiz": "Quiz",
+    "xpEarned": "XP earned",
+    "level": "Level",
+    "progress": "Progress",
+    "levels": {
+      "novice": "Novice",
+      "retail": "Retail Trader",
+      "informed": "Informed Trader",
+      "smartMoney": "Smart Money",
+      "marketMaker": "Market Maker"
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "profile": "Profile",
+    "appearance": "Appearance",
+    "language": "Language",
+    "theme": "Theme",
+    "dark": "Dark",
+    "light": "Light",
+    "system": "System"
+  },
+  "disclaimer": "Market data may be delayed. For educational and simulation purposes only. This does not constitute financial advice."
+}

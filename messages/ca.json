@@ -1,0 +1,177 @@
+{
+  "common": {
+    "appName": "FINVEST",
+    "tagline": "Plataforma de Trading Smart Money",
+    "loading": "Carregant...",
+    "error": "Error",
+    "save": "Desar",
+    "cancel": "Cancel·lar",
+    "confirm": "Confirmar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "close": "Tancar",
+    "back": "Tornar",
+    "next": "Següent",
+    "previous": "Anterior",
+    "search": "Cercar",
+    "noResults": "Sense resultats",
+    "seeAll": "Veure tot"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "chart": "Gràfic",
+    "simulator": "Simulador",
+    "portfolio": "Portfolio",
+    "academy": "Acadèmia",
+    "settings": "Configuració"
+  },
+  "auth": {
+    "login": "Iniciar Sessió",
+    "register": "Crear Compte",
+    "logout": "Tancar Sessió",
+    "email": "Correu electrònic",
+    "password": "Contrasenya",
+    "confirmPassword": "Confirmar contrasenya",
+    "username": "Nom d'usuari",
+    "forgotPassword": "Has oblidat la contrasenya?",
+    "noAccount": "No tens compte?",
+    "hasAccount": "Ja tens compte?",
+    "registerHere": "Registra't aquí",
+    "loginHere": "Inicia sessió aquí",
+    "orContinueWith": "O continuar amb",
+    "errors": {
+      "invalidEmail": "Correu electrònic no vàlid",
+      "passwordMin": "La contrasenya ha de tenir almenys 8 caràcters",
+      "passwordMatch": "Les contrasenyes no coincideixen",
+      "usernameMin": "El nom d'usuari ha de tenir almenys 3 caràcters",
+      "loginFailed": "Credencials incorrectes",
+      "registerFailed": "Error en crear el compte"
+    }
+  },
+  "landing": {
+    "hero": {
+      "title": "Domina el Trading amb",
+      "titleHighlight": "Smart Money Concepts",
+      "subtitle": "La plataforma que integra ICT, Smart Money, Wyckoff i Elliott Wave. Aprèn, practica amb simulador i analitza mercats amb IA.",
+      "cta": "Començar Gratis",
+      "ctaSecondary": "Veure Demo"
+    },
+    "features": {
+      "title": "Tot el que necessites per operar com un professional",
+      "charts": {
+        "title": "Gràfics SMC Professionals",
+        "description": "Detecció automàtica de FVG, Order Blocks, BOS, ChoCH i zones de liquiditat directament al gràfic."
+      },
+      "simulator": {
+        "title": "Simulador de Trading",
+        "description": "Practica amb 100.000€ virtuals en condicions reals de mercat. Sense risc, màxim aprenentatge."
+      },
+      "ai": {
+        "title": "Anàlisi IA Smart Money",
+        "description": "IA que detecta patrons SMC automàticament i genera BIAS diaris amb nivells clau."
+      },
+      "academy": {
+        "title": "Acadèmia ICT/SMC",
+        "description": "Aprèn des de zero fins a nivell expert amb lliçons interactives, quizzes i sistema de XP."
+      }
+    }
+  },
+  "dashboard": {
+    "welcome": "Benvingut de nou",
+    "marketOverview": "Vista del Mercat",
+    "watchlist": "Llista de Seguiment",
+    "dailyBias": "BIAS Diari",
+    "addToWatchlist": "Afegir a watchlist",
+    "removeFromWatchlist": "Eliminar de watchlist",
+    "noWatchlist": "La teva watchlist és buida. Cerca actius per afegir.",
+    "forex": "Forex",
+    "indices": "Índexs",
+    "crypto": "Cripto"
+  },
+  "chart": {
+    "timeframes": "Temporalitat",
+    "indicators": "Indicadors SMC",
+    "fvg": "Fair Value Gap",
+    "ob": "Order Blocks",
+    "bos": "Break of Structure",
+    "choch": "Change of Character",
+    "pdh_pdl": "PDH/PDL",
+    "liquidity": "Liquiditat BSL/SSL",
+    "ndog": "NDOG",
+    "nwog": "NWOG",
+    "volume": "Volum"
+  },
+  "trading": {
+    "buy": "Comprar",
+    "sell": "Vendre",
+    "long": "Long",
+    "short": "Short",
+    "market": "Mercat",
+    "limit": "Límit",
+    "stopLoss": "Stop Loss",
+    "takeProfit": "Take Profit",
+    "quantity": "Quantitat",
+    "leverage": "Apalancament",
+    "riskReward": "Risc:Recompensa",
+    "executeOrder": "Executar Ordre",
+    "closePosition": "Tancar Posició",
+    "openPositions": "Posicions Obertes",
+    "noPositions": "No tens posicions obertes",
+    "entryPrice": "Preu d'entrada",
+    "currentPrice": "Preu actual",
+    "pnl": "P&L",
+    "balance": "Balanç",
+    "availableMargin": "Marge disponible",
+    "virtualCapital": "Capital Virtual"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "totalPnl": "P&L Total",
+    "winRate": "Win Rate",
+    "profitFactor": "Profit Factor",
+    "maxDrawdown": "Drawdown Màxim",
+    "tradeHistory": "Historial d'Operacions",
+    "noTrades": "Encara no has fet cap operació",
+    "strategy": "Estratègia",
+    "date": "Data",
+    "symbol": "Actiu",
+    "direction": "Direcció",
+    "entry": "Entrada",
+    "exit": "Sortida",
+    "result": "Resultat"
+  },
+  "academy": {
+    "title": "Acadèmia Smart Money",
+    "subtitle": "Aprèn ICT/SMC des de zero fins a nivell expert",
+    "beginner": "Principiant",
+    "intermediate": "Intermedi",
+    "advanced": "Avançat",
+    "expert": "Expert",
+    "startLesson": "Començar Lliçó",
+    "continueLesson": "Continuar",
+    "completed": "Completada",
+    "locked": "Bloquejada",
+    "quiz": "Quiz",
+    "xpEarned": "XP guanyat",
+    "level": "Nivell",
+    "progress": "Progrés",
+    "levels": {
+      "novice": "Novell",
+      "retail": "Retail Trader",
+      "informed": "Informed Trader",
+      "smartMoney": "Smart Money",
+      "marketMaker": "Market Maker"
+    }
+  },
+  "settings": {
+    "title": "Configuració",
+    "profile": "Perfil",
+    "appearance": "Aparença",
+    "language": "Idioma",
+    "theme": "Tema",
+    "dark": "Fosc",
+    "light": "Clar",
+    "system": "Sistema"
+  },
+  "disclaimer": "Dades de mercat amb possible retard. Només per a ús educatiu i simulació. No constitueix assessorament financer."
+}
