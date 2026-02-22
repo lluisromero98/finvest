@@ -1,3 +1,5 @@
+"use client";
+
 import { useTranslations } from "next-intl";
 import {
   Card,
@@ -19,8 +21,10 @@ import {
   LineChart,
   Brain,
   Sparkles,
+  Loader2,
 } from "lucide-react";
 import { Link } from "@/i18n/navigation";
+import { useMultipleQuotes, type QuoteData } from "@/lib/hooks/use-market-data";
 
 const mockMarketData = {
   forex: [
@@ -43,9 +47,60 @@ const mockMarketData = {
   ],
 };
 
+// Symbols to fetch real quotes for
+const FOREX_SYMBOLS = ["EURUSD", "GBPUSD", "USDJPY", "AUDUSD"];
+const INDEX_SYMBOLS = ["SP500", "NQ"];
+const CRYPTO_SYMBOLS = ["BTCUSD", "ETHUSD", "SOLUSD", "XRPUSD"];
+const ALL_SYMBOLS = [...FOREX_SYMBOLS, ...INDEX_SYMBOLS, ...CRYPTO_SYMBOLS];
+
+function quoteToAsset(q: QuoteData): {
+  symbol: string;
+  name: string;
+  price: string;
+  change: string;
+  up: boolean;
+  chartSymbol: string;
+} {
+  const isCrypto = q.internalSymbol.includes("BTC") || q.internalSymbol.includes("ETH") || q.internalSymbol.includes("SOL") || q.internalSymbol.includes("XRP");
+  const isIndex = q.internalSymbol === "SP500" || q.internalSymbol === "NQ";
+  const decimals = q.internalSymbol === "USDJPY" ? 3 : isCrypto || isIndex ? 2 : 5;
+
+  return {
+    symbol: q.symbol.includes("/") ? q.symbol : q.name,
+    name: q.name,
+    price: isCrypto && q.price > 1000
+      ? q.price.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 })
+      : q.price.toFixed(decimals),
+    change: `${q.percentChange >= 0 ? "+" : ""}${q.percentChange.toFixed(2)}%`,
+    up: q.percentChange >= 0,
+    chartSymbol: q.internalSymbol,
+  };
+}
+
 export default function DashboardPage() {
   const t = useTranslations("dashboard");
   const tTrading = useTranslations("trading");
+
+  // Fetch real quotes
+  const { quotes, isLoading: isLoadingQuotes } = useMultipleQuotes(ALL_SYMBOLS);
+
+  // Build market data from real quotes or fall back to mock
+  const realMarketData = quotes
+    ? {
+        forex: quotes
+          .filter((q) => FOREX_SYMBOLS.includes(q.internalSymbol))
+          .map(quoteToAsset),
+        indices: quotes
+          .filter((q) => INDEX_SYMBOLS.includes(q.internalSymbol))
+          .map(quoteToAsset),
+        crypto: quotes
+          .filter((q) => CRYPTO_SYMBOLS.includes(q.internalSymbol))
+          .map(quoteToAsset),
+      }
+    : null;
+
+  const marketData = realMarketData ?? mockMarketData;
+  const usingRealData = realMarketData !== null;
 
   return (
     <div className="space-y-6">
@@ -116,7 +171,23 @@ export default function DashboardPage() {
         <div className="lg:col-span-2">
           <Card>
             <CardHeader className="pb-3">
-              <CardTitle>{t("marketOverview")}</CardTitle>
+              <div className="flex items-center justify-between">
+                <CardTitle>{t("marketOverview")}</CardTitle>
+                <div className="flex items-center gap-2">
+                  {isLoadingQuotes && (
+                    <Loader2 className="h-4 w-4 animate-spin text-muted-foreground" />
+                  )}
+                  {usingRealData ? (
+                    <Badge variant="outline" className="border-emerald-500/30 text-emerald-500 text-[10px]">
+                      LIVE
+                    </Badge>
+                  ) : (
+                    <Badge variant="outline" className="border-amber-500/30 text-amber-500 text-[10px]">
+                      MOCK
+                    </Badge>
+                  )}
+                </div>
+              </div>
             </CardHeader>
             <CardContent>
               <Tabs defaultValue="forex">
@@ -127,16 +198,16 @@ export default function DashboardPage() {
                 </TabsList>
 
                 {(
-                  Object.entries(mockMarketData) as [
-                    keyof typeof mockMarketData,
-                    (typeof mockMarketData)["forex"],
+                  Object.entries(marketData) as [
+                    string,
+                    typeof mockMarketData.forex,
                   ][]
                 ).map(([key, assets]) => (
                   <TabsContent key={key} value={key} className="space-y-2">
                     {assets.map((asset) => (
                       <Link
                         key={asset.symbol}
-                        href={`/chart/${asset.symbol.replace("/", "")}`}
+                        href={`/chart/${"chartSymbol" in asset ? asset.chartSymbol : asset.symbol.replace("/", "")}`}
                       >
                         <div className="flex items-center justify-between rounded-lg border border-border/50 p-3 transition-all duration-200 hover:border-emerald-500/30 hover:bg-accent/50">
                           <div className="flex items-center gap-3">

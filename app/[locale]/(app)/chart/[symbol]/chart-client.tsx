@@ -9,12 +9,14 @@ import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { ChartControls } from "@/components/charts/chart-controls";
 import { generateMockOHLCV } from "@/lib/market-data/mock-data";
+import { useTimeSeries, useQuote } from "@/lib/hooks/use-market-data";
 import {
   TrendingUp,
   TrendingDown,
   Maximize2,
   ArrowUpRight,
   ArrowDownRight,
+  Loader2,
 } from "lucide-react";
 
 // Dynamic import - Lightweight Charts only works in browser
@@ -52,14 +54,26 @@ export function ChartPageClient({
   ]);
   const [isFullscreen, setIsFullscreen] = useState(false);
 
-  const data = useMemo(() => generateMockOHLCV(symbol, 120), [symbol]);
+  // Try real data first, fall back to mock
+  const { data: realData, isLoading: isLoadingChart } = useTimeSeries(symbol, timeframe);
+  const { quote } = useQuote(symbol);
+  const mockData = useMemo(() => generateMockOHLCV(symbol, 120), [symbol]);
+  const data = realData && realData.length > 0 ? realData : mockData;
+  const usingRealData = realData && realData.length > 0;
+
   const lastCandle = data[data.length - 1];
   const prevCandle = data[data.length - 2];
-  const isUp = lastCandle && prevCandle && lastCandle.close >= prevCandle.close;
-  const changePercent =
-    lastCandle && prevCandle
+
+  // Use quote data if available, otherwise calculate from candles
+  const isUp = quote
+    ? quote.percentChange >= 0
+    : lastCandle && prevCandle && lastCandle.close >= prevCandle.close;
+  const changePercent = quote
+    ? quote.percentChange.toFixed(2)
+    : lastCandle && prevCandle
       ? (((lastCandle.close - prevCandle.close) / prevCandle.close) * 100).toFixed(2)
       : "0.00";
+  const displayPrice = quote ? quote.price : lastCandle?.close;
 
   function toggleOverlay(overlay: string) {
     setActiveOverlays((prev) =>
@@ -80,11 +94,20 @@ export function ChartPageClient({
               <Badge variant="outline" className="text-xs">
                 {assetType.toUpperCase()}
               </Badge>
+              {usingRealData ? (
+                <Badge variant="outline" className="border-emerald-500/30 text-emerald-500 text-[10px]">
+                  LIVE
+                </Badge>
+              ) : (
+                <Badge variant="outline" className="border-amber-500/30 text-amber-500 text-[10px]">
+                  MOCK
+                </Badge>
+              )}
             </div>
-            {lastCandle && (
+            {(displayPrice || lastCandle) && (
               <div className="mt-0.5 flex items-center gap-2">
                 <span className="text-lg font-bold font-mono">
-                  {lastCandle.close}
+                  {displayPrice ?? lastCandle?.close}
                 </span>
                 <div
                   className={`flex items-center gap-0.5 text-sm font-medium ${
@@ -153,7 +176,12 @@ export function ChartPageClient({
 
       {/* Chart */}
       <Card className="flex-1 overflow-hidden">
-        <CardContent className="h-full min-h-[400px] p-0 sm:min-h-[500px]">
+        <CardContent className="relative h-full min-h-[400px] p-0 sm:min-h-[500px]">
+          {isLoadingChart && !data.length && (
+            <div className="absolute inset-0 z-10 flex items-center justify-center bg-background/80">
+              <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
+            </div>
+          )}
           <CandlestickChart data={data} />
         </CardContent>
       </Card>
