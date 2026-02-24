@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { searchSymbols, isConfigured } from "@/lib/market-data/twelve-data";
+import { getMockSearchResults } from "@/lib/market-data/mock-data";
 
 export async function GET(request: NextRequest) {
   const { searchParams } = request.nextUrl;
@@ -12,11 +13,10 @@ export async function GET(request: NextRequest) {
     );
   }
 
+  // If API not configured, use mock search
   if (!isConfigured()) {
-    return NextResponse.json(
-      { error: "Market data API not configured" },
-      { status: 503 }
-    );
+    const results = getMockSearchResults(query);
+    return NextResponse.json({ results });
   }
 
   try {

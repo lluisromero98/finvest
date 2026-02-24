@@ -5,18 +5,18 @@ import { Link, usePathname } from "@/i18n/navigation";
 import {
   LayoutDashboard,
   LineChart,
-  BarChart3,
-  Briefcase,
   GraduationCap,
+  BarChart3,
+  Settings,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navItems = [
   { href: "/dashboard", icon: LayoutDashboard, labelKey: "dashboard" as const },
   { href: "/chart/EURUSD", icon: LineChart, labelKey: "chart" as const },
-  { href: "/simulator", icon: BarChart3, labelKey: "simulator" as const },
-  { href: "/portfolio", icon: Briefcase, labelKey: "portfolio" as const },
   { href: "/academy", icon: GraduationCap, labelKey: "academy" as const },
+  { href: "/statistics", icon: BarChart3, labelKey: "statistics" as const },
+  { href: "/settings", icon: Settings, labelKey: "settings" as const },
 ];
 
 export function BottomNav() {
@@ -35,9 +35,7 @@ export function BottomNav() {
               href={item.href}
               className={cn(
                 "flex flex-col items-center gap-0.5 rounded-lg px-3 py-1.5 text-[10px] font-medium transition-colors",
-                isActive
-                  ? "text-emerald-500"
-                  : "text-muted-foreground"
+                isActive ? "text-emerald-500" : "text-muted-foreground"
               )}
             >
               <item.icon className={cn("h-5 w-5", isActive && "text-emerald-500")} />

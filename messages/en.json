@@ -15,38 +15,17 @@
     "previous": "Previous",
     "search": "Search",
     "noResults": "No results",
-    "seeAll": "See all"
+    "seeAll": "See all",
+    "recent": "Recent",
+    "openChart": "Open chart",
+    "searchAsset": "Search asset"
   },
   "nav": {
     "dashboard": "Dashboard",
     "chart": "Chart",
-    "simulator": "Simulator",
-    "portfolio": "Portfolio",
     "academy": "Academy",
+    "statistics": "Statistics",
     "settings": "Settings"
-  },
-  "auth": {
-    "login": "Sign In",
-    "register": "Create Account",
-    "logout": "Sign Out",
-    "email": "Email",
-    "password": "Password",
-    "confirmPassword": "Confirm password",
-    "username": "Username",
-    "forgotPassword": "Forgot your password?",
-    "noAccount": "Don't have an account?",
-    "hasAccount": "Already have an account?",
-    "registerHere": "Register here",
-    "loginHere": "Sign in here",
-    "orContinueWith": "Or continue with",
-    "errors": {
-      "invalidEmail": "Invalid email address",
-      "passwordMin": "Password must be at least 8 characters",
-      "passwordMatch": "Passwords do not match",
-      "usernameMin": "Username must be at least 3 characters",
-      "loginFailed": "Invalid credentials",
-      "registerFailed": "Failed to create account"
-    }
   },
   "landing": {
     "hero": {
@@ -77,16 +56,34 @@
     }
   },
   "dashboard": {
-    "welcome": "Welcome back",
+    "welcome": "Welcome to FINVEST",
     "marketOverview": "Market Overview",
     "watchlist": "Watchlist",
-    "dailyBias": "Daily BIAS",
-    "addToWatchlist": "Add to watchlist",
+    "addToWatchlist": "Add",
     "removeFromWatchlist": "Remove from watchlist",
     "noWatchlist": "Your watchlist is empty. Search for assets to add.",
     "forex": "Forex",
     "indices": "Indices",
-    "crypto": "Crypto"
+    "crypto": "Crypto",
+    "commodities": "Commodities",
+    "featuredChart": "Featured Chart",
+    "fullChart": "Full chart",
+    "killZone": {
+      "title": "Active Session",
+      "asian": "Asian Session",
+      "london": "London Session",
+      "nyAm": "NY AM Session",
+      "nyPm": "NY PM Session",
+      "closed": "Market Closed",
+      "utc": "UTC",
+      "local": "Local"
+    },
+    "marketStats": {
+      "activeSession": "Active Session",
+      "gold": "Gold",
+      "sp500": "S&P 500",
+      "bitcoin": "Bitcoin"
+    }
   },
   "chart": {
     "timeframes": "Timeframe",
@@ -113,8 +110,6 @@
     "quantity": "Quantity",
     "leverage": "Leverage",
     "riskReward": "Risk:Reward",
-    "executeOrder": "Execute Order",
-    "closePosition": "Close Position",
     "openPositions": "Open Positions",
     "noPositions": "No open positions",
     "entryPrice": "Entry Price",
@@ -124,43 +119,62 @@
     "availableMargin": "Available Margin",
     "virtualCapital": "Virtual Capital"
   },
-  "portfolio": {
-    "title": "Portfolio",
-    "totalPnl": "Total P&L",
-    "winRate": "Win Rate",
-    "profitFactor": "Profit Factor",
-    "maxDrawdown": "Max Drawdown",
-    "tradeHistory": "Trade History",
-    "noTrades": "You haven't made any trades yet",
-    "strategy": "Strategy",
-    "date": "Date",
-    "symbol": "Symbol",
-    "direction": "Direction",
-    "entry": "Entry",
-    "exit": "Exit",
-    "result": "Result"
-  },
   "academy": {
     "title": "Smart Money Academy",
     "subtitle": "Learn ICT/SMC from zero to expert level",
-    "beginner": "Beginner",
-    "intermediate": "Intermediate",
-    "advanced": "Advanced",
-    "expert": "Expert",
     "startLesson": "Start Lesson",
     "continueLesson": "Continue",
     "completed": "Completed",
-    "locked": "Locked",
-    "quiz": "Quiz",
-    "xpEarned": "XP earned",
-    "level": "Level",
     "progress": "Progress",
-    "levels": {
-      "novice": "Novice",
-      "retail": "Retail Trader",
-      "informed": "Informed Trader",
-      "smartMoney": "Smart Money",
-      "marketMaker": "Market Maker"
+    "completeLesson": "Complete lesson",
+    "lessonCompleted": "Lesson completed",
+    "keyTakeaways": "Key Takeaways",
+    "whenToBuy": "When to BUY",
+    "whenToSell": "When to SELL",
+    "modules": {
+      "foundations": "Foundations",
+      "keyConcepts": "Key Concepts",
+      "liquidity": "Liquidity",
+      "sessions": "Sessions & Timing",
+      "multiTimeframe": "Multi-Timeframe",
+      "entryModels": "Entry Models",
+      "riskManagement": "Risk Management",
+      "performance": "Performance"
+    }
+  },
+  "statistics": {
+    "title": "Statistics & Tools",
+    "subtitle": "Calculators and references for professional trading",
+    "positionCalc": {
+      "title": "Position Calculator",
+      "accountSize": "Account size",
+      "riskPercent": "Risk (%)",
+      "stopLossPips": "Stop Loss (pips)",
+      "lotSize": "Lot size",
+      "riskAmount": "Risk in $",
+      "units": "Units"
+    },
+    "rrCalc": {
+      "title": "R:R Calculator",
+      "entryPrice": "Entry price",
+      "stopLoss": "Stop Loss",
+      "takeProfit": "Take Profit",
+      "ratio": "R:R Ratio",
+      "riskPips": "Risk (pips)",
+      "rewardPips": "Reward (pips)"
+    },
+    "killZone": {
+      "title": "Kill Zones Clock",
+      "description": "Kill Zones are the periods of highest volatility and liquidity in the market."
+    },
+    "reference": {
+      "title": "Metrics Reference",
+      "winRate": "Win Rate",
+      "profitFactor": "Profit Factor",
+      "maxDrawdown": "Max Drawdown",
+      "sharpeRatio": "Sharpe Ratio",
+      "expectancy": "Expectancy",
+      "riskReward": "Risk:Reward"
     }
   },
   "settings": {

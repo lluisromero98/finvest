@@ -15,38 +15,17 @@
     "previous": "Anterior",
     "search": "Cercar",
     "noResults": "Sense resultats",
-    "seeAll": "Veure tot"
+    "seeAll": "Veure tot",
+    "recent": "Recents",
+    "openChart": "Obrir gràfic",
+    "searchAsset": "Cercar actiu"
   },
   "nav": {
     "dashboard": "Dashboard",
     "chart": "Gràfic",
-    "simulator": "Simulador",
-    "portfolio": "Portfolio",
     "academy": "Acadèmia",
+    "statistics": "Estadístiques",
     "settings": "Configuració"
-  },
-  "auth": {
-    "login": "Iniciar Sessió",
-    "register": "Crear Compte",
-    "logout": "Tancar Sessió",
-    "email": "Correu electrònic",
-    "password": "Contrasenya",
-    "confirmPassword": "Confirmar contrasenya",
-    "username": "Nom d'usuari",
-    "forgotPassword": "Has oblidat la contrasenya?",
-    "noAccount": "No tens compte?",
-    "hasAccount": "Ja tens compte?",
-    "registerHere": "Registra't aquí",
-    "loginHere": "Inicia sessió aquí",
-    "orContinueWith": "O continuar amb",
-    "errors": {
-      "invalidEmail": "Correu electrònic no vàlid",
-      "passwordMin": "La contrasenya ha de tenir almenys 8 caràcters",
-      "passwordMatch": "Les contrasenyes no coincideixen",
-      "usernameMin": "El nom d'usuari ha de tenir almenys 3 caràcters",
-      "loginFailed": "Credencials incorrectes",
-      "registerFailed": "Error en crear el compte"
-    }
   },
   "landing": {
     "hero": {
@@ -77,16 +56,34 @@
     }
   },
   "dashboard": {
-    "welcome": "Benvingut de nou",
+    "welcome": "Benvingut a FINVEST",
     "marketOverview": "Vista del Mercat",
     "watchlist": "Llista de Seguiment",
-    "dailyBias": "BIAS Diari",
-    "addToWatchlist": "Afegir a watchlist",
+    "addToWatchlist": "Afegir",
     "removeFromWatchlist": "Eliminar de watchlist",
     "noWatchlist": "La teva watchlist és buida. Cerca actius per afegir.",
     "forex": "Forex",
     "indices": "Índexs",
-    "crypto": "Cripto"
+    "crypto": "Cripto",
+    "commodities": "Matèries Primeres",
+    "featuredChart": "Gràfic Destacat",
+    "fullChart": "Gràfic complet",
+    "killZone": {
+      "title": "Sessió Activa",
+      "asian": "Sessió Asiàtica",
+      "london": "Sessió Londres",
+      "nyAm": "NY Sessió AM",
+      "nyPm": "NY Sessió PM",
+      "closed": "Mercat Tancat",
+      "utc": "UTC",
+      "local": "Local"
+    },
+    "marketStats": {
+      "activeSession": "Sessió Activa",
+      "gold": "Or",
+      "sp500": "S&P 500",
+      "bitcoin": "Bitcoin"
+    }
   },
   "chart": {
     "timeframes": "Temporalitat",
@@ -113,8 +110,6 @@
     "quantity": "Quantitat",
     "leverage": "Apalancament",
     "riskReward": "Risc:Recompensa",
-    "executeOrder": "Executar Ordre",
-    "closePosition": "Tancar Posició",
     "openPositions": "Posicions Obertes",
     "noPositions": "No tens posicions obertes",
     "entryPrice": "Preu d'entrada",
@@ -124,43 +119,62 @@
     "availableMargin": "Marge disponible",
     "virtualCapital": "Capital Virtual"
   },
-  "portfolio": {
-    "title": "Portfolio",
-    "totalPnl": "P&L Total",
-    "winRate": "Win Rate",
-    "profitFactor": "Profit Factor",
-    "maxDrawdown": "Drawdown Màxim",
-    "tradeHistory": "Historial d'Operacions",
-    "noTrades": "Encara no has fet cap operació",
-    "strategy": "Estratègia",
-    "date": "Data",
-    "symbol": "Actiu",
-    "direction": "Direcció",
-    "entry": "Entrada",
-    "exit": "Sortida",
-    "result": "Resultat"
-  },
   "academy": {
     "title": "Acadèmia Smart Money",
     "subtitle": "Aprèn ICT/SMC des de zero fins a nivell expert",
-    "beginner": "Principiant",
-    "intermediate": "Intermedi",
-    "advanced": "Avançat",
-    "expert": "Expert",
     "startLesson": "Començar Lliçó",
     "continueLesson": "Continuar",
     "completed": "Completada",
-    "locked": "Bloquejada",
-    "quiz": "Quiz",
-    "xpEarned": "XP guanyat",
-    "level": "Nivell",
     "progress": "Progrés",
-    "levels": {
-      "novice": "Novell",
-      "retail": "Retail Trader",
-      "informed": "Informed Trader",
-      "smartMoney": "Smart Money",
-      "marketMaker": "Market Maker"
+    "completeLesson": "Completar lliçó",
+    "lessonCompleted": "Lliçó completada",
+    "keyTakeaways": "Punts Clau",
+    "whenToBuy": "Quan COMPRAR",
+    "whenToSell": "Quan VENDRE",
+    "modules": {
+      "foundations": "Fonaments",
+      "keyConcepts": "Conceptes Clau",
+      "liquidity": "Liquiditat",
+      "sessions": "Sessions i Timing",
+      "multiTimeframe": "Multi-Timeframe",
+      "entryModels": "Models d'Entrada",
+      "riskManagement": "Gestió del Risc",
+      "performance": "Rendiment"
+    }
+  },
+  "statistics": {
+    "title": "Estadístiques i Eines",
+    "subtitle": "Calculadores i referències per a trading professional",
+    "positionCalc": {
+      "title": "Calculadora de Posició",
+      "accountSize": "Mida del compte",
+      "riskPercent": "Risc (%)",
+      "stopLossPips": "Stop Loss (pips)",
+      "lotSize": "Mida del lot",
+      "riskAmount": "Risc en $",
+      "units": "Unitats"
+    },
+    "rrCalc": {
+      "title": "Calculadora R:R",
+      "entryPrice": "Preu d'entrada",
+      "stopLoss": "Stop Loss",
+      "takeProfit": "Take Profit",
+      "ratio": "Ratio R:R",
+      "riskPips": "Risc (pips)",
+      "rewardPips": "Recompensa (pips)"
+    },
+    "killZone": {
+      "title": "Rellotge Kill Zones",
+      "description": "Les Kill Zones són els períodes de major volatilitat i liquiditat al mercat."
+    },
+    "reference": {
+      "title": "Referència de Mètriques",
+      "winRate": "Win Rate",
+      "profitFactor": "Profit Factor",
+      "maxDrawdown": "Drawdown Màxim",
+      "sharpeRatio": "Sharpe Ratio",
+      "expectancy": "Expectancy",
+      "riskReward": "Risk:Reward"
     }
   },
   "settings": {

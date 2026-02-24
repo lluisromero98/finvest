@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -11,8 +10,6 @@ import { ChartControls } from "@/components/charts/chart-controls";
 import { generateMockOHLCV } from "@/lib/market-data/mock-data";
 import { useTimeSeries, useQuote } from "@/lib/hooks/use-market-data";
 import {
-  TrendingUp,
-  TrendingDown,
   Maximize2,
   ArrowUpRight,
   ArrowDownRight,
@@ -46,7 +43,6 @@ export function ChartPageClient({
   displayName,
   assetType,
 }: ChartPageClientProps) {
-  const t = useTranslations("trading");
   const [timeframe, setTimeframe] = useState("1d");
   const [activeOverlays, setActiveOverlays] = useState<string[]>([
     "pdh_pdl",
@@ -130,7 +126,7 @@ export function ChartPageClient({
         <div className="flex items-center gap-2">
           {/* OHLCV Info */}
           {lastCandle && (
-            <div className="hidden items-center gap-3 text-xs text-muted-foreground lg:flex">
+            <div className="flex items-center gap-3 text-xs text-muted-foreground flex-wrap">
               <span>
                 O <span className="font-mono text-foreground">{lastCandle.open}</span>
               </span>
